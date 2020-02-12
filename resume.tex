@@ -1,0 +1,255 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.9in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{mdwlist}
+\usepackage{hyperref}
+\usepackage{fix-cm}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{tgpagella}
+
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+% and the actual content starts here
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% NAME AND PERSONAL DETAILS %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+{\LARGE \textbf{Yongqi WANG}}
+
+% \ \ Zürich, Switzerland \\
+\textbullet \ \ \href{tel:410782510650}{+41 78 251 06 50} \ \
+\textbullet \ \ \href{mailto:wangyq977@gmail.com}{wangyq977@gmail.com}
+\end{center}
+
+
+%%%%%%%%%%%%%%%%
+% 1. EDUCATION %
+%%%%%%%%%%%%%%%%
+
+\hrule
+\vspace{-1em}
+\subsection*{Education}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item
+	\headerrow
+		{\textbf{ETH Zürich}}
+		{\textbf{Zürich, Switzerland}}
+	\\
+	\headerrow
+		{\emph{D-BSSE, M.S. Computational Biology and Bioinformatics}}
+		{\emph{Expected 2020}}
+
+	\item
+	\headerrow
+		{\textbf{The Hong Kong Polytechnic University}}
+		{\textbf{Hong Kong, China}}
+	\\
+	\headerrow
+		{\emph{D-ABCT, B.S. Applied Biology with Biotechnology}}
+		{\emph{June 2018}}
+
+	\item
+	\headerrow
+		{\textbf{The University of Waterloo}}
+		{\textbf{Waterloo, Canada}}
+	\\
+	\headerrow
+		{\emph{D-BIOL, Exchange student}}
+		{\emph{January 2017 - May 2017}}
+
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% 2. EXPERIENCE - WORK %
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\hrule
+\vspace{-1em}
+\subsection*{Experience - Work}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item
+	\headerrow
+		{\textbf{Hong Kong Polytechnic University}}
+		{\textbf{Hong Kong, China}}
+	\\
+	\headerrow
+		{\emph{Research Assistant}}
+		{\emph{February 2018 - July 2018}}
+	\begin{itemize*}
+		\item Classification of protein binding pattern
+    	\item Visualization to facilitate graphical representation of the medical data
+    	\item Identified differential binding events and its causal relations
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{Beijing Novogene Technology Co. Ltd.}}
+		{\textbf{Beijing, China}}
+	\\
+	\headerrow
+		{\emph{Summer Data Analyst Internship}}
+		{\emph{April 2017 - August 2017}}
+	\begin{itemize*}
+		\item Maintenance of data pre-processing pipeline
+    	\item Revised and maintained a RNA-seq analysis pipeline 
+    	\item Development of an visual pipeline editor
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{China Agricultural University}}
+		{\textbf{Beijing, China}}
+	\\
+	\headerrow
+		{\emph{Research Assistant}}
+		{\emph{April 2016 - August 2016}}
+	\begin{itemize*}
+		\item Built an internal server for microarray analysis usage
+		\item Incorporated common Bioconductor packages for the original microarray analysis workflow.
+	\end{itemize*}
+
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 3. EXPERIENCE - PROJECTS %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\hrule
+\vspace{-1em}
+\subsection*{Experience - \href{https://github.com/wyq977}{Projects}}
+
+% \vspace{-0.4em}
+
+\begin{itemize*}
+	\parskip=0.1em
+
+	\item Helped integrate a CI/CD toolbox for benchmarking behavioural data in \href{http://bachlab.org/}{bachlab}@UZH.
+
+	\item Finished multiple projects such as object detection with ML, texture extraction.
+
+	\item Participant in International Olympiad selection camps (Biology) in Guangdong, China
+	
+\end{itemize*}
+
+
+%%%%%%%%%%%%%
+% 4. AWARDS %
+%%%%%%%%%%%%%
+
+\hrule
+\vspace{-1em}
+\subsection*{Awards}
+
+\begin{itemize}
+	\parskip=0.1em
+		\item
+		\headerrow
+			{Dean’s List of Outstanding Students, Faculty of Applied Science and Textiles, PolyU}
+			{2017}
+
+		\item
+		\headerrow
+			{Work-Integrated Education Offshore Sponsorship, PolyU}
+            {2017}
+
+        \item
+		\headerrow
+            {Wong Tit-shing Student Exchange Scholarship, PolyU}
+            {2017}
+
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+% 5. TECHNICAL SKILLS %
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\hrule
+\vspace{-1em}
+\subsection*{Technical Skills}
+
+\begin{indentsection}{\parindent}
+\hyphenpenalty=1000
+\begin{description*}
+	\item
+	{\textbf{Languages}}
+
+	\begin{itemize*}
+        \item {Advanced: Python}
+        \item {Intermediate: R, Bash}
+	\end{itemize*}
+
+	\item
+	{\textbf{Bioinformatics}}
+
+	Next-generation sequencing data analysis, Gemomics
+
+\end{description*}
+\end{indentsection}
+
+
+%%%%%%%%%%%%%%%%%%%%
+% 6. COURSES TAKEN %
+%%%%%%%%%%%%%%%%%%%%
+
+\hrule
+\vspace{-1em}
+\subsection*{Courses taken}
+
+\begin{indentsection}{\parindent}
+\hyphenpenalty=1000
+\begin{description*}
+	\item
+	{\textbf{Statistics}}
+	Mathematical Statistics, Probability Theory, Casualty, Empirical Process Theory, Statical Models in Computational Biology, Mathematical Tools in ML, High-Dimensional Statistics
+
+	\item
+	{\textbf{Others}}
+	Data Mining, Intro to ML, Computational Intelligence Lab, Advanced Machine learning
+
+\end{description*}
+\end{indentsection}
+
+\end{document}
