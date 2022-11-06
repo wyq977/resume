@@ -1,7 +1,7 @@
-all: build clean-junk
+all: build clean
 
 build:
-	pdflatex resume.tex
+	latexmk resume.tex
 
-clean-junk:
-	$(RM) resume.aux resume.log resume.out texput.log
+clean:
+	latexmk -c resume.tex
