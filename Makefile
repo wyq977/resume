@@ -4,4 +4,4 @@ build:
 	latexmk resume.tex
 
 clean:
-	latexmk -c resume.tex
+	latexmk -c resume*.tex
