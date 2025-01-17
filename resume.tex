@@ -1,5 +1,5 @@
-\documentclass[10pt,letterpaper]{article}
-\usepackage[letterpaper,margin=0.9in]{geometry}
+\documentclass[10pt,a4paper]{article}
+\usepackage[a4paper,margin=0.5in]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage{mdwlist}
 \usepackage{hyperref}
@@ -7,6 +7,14 @@
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
 \usepackage{tgpagella}
+\usepackage[
+backend=biber,
+style=mla,
+sorting=ynt,
+maxbibnames=99
+]{biblatex}
+\addbibresource{publications.bib}
+
 
 \pagestyle{empty}
 \setlength{\tabcolsep}{0em}
@@ -69,7 +77,16 @@
 
 	\item
 	\headerrow
-		{\textbf{ETH Zürich}}
+		{\textbf{Centrum Wiskunde \& Informatica (CWI)}}
+		{\textbf{Amsterdam, Netherlands}}
+	\\
+	\headerrow
+		{\emph{PhD, Machine Learning, supervised by Prof. dr. \href{https://safestatistics.com/}{Peter Gr\"{u}nwald}}}
+		{\emph{Dec 2024 - Present}}
+
+	\item
+	\headerrow
+		{\textbf{Eidgenössische Technische Hochschule Zürich (ETHz)}}
 		{\textbf{Zürich, Switzerland}}
 	\\
 	\headerrow
@@ -78,7 +95,7 @@
 
 	\item
 	\headerrow
-		{\textbf{The Hong Kong Polytechnic University}}
+		{\textbf{The Hong Kong Polytechnic University (PolyU)}}
 		{\textbf{Hong Kong, China}}
 	\\
 	\headerrow
@@ -87,11 +104,11 @@
 
 	\item
 	\headerrow
-		{\textbf{The University of Waterloo}}
+		{\textbf{The University of Waterloo (UWaterloo)}}
 		{\textbf{Waterloo, Canada}}
 	\\
 	\headerrow
-		{\emph{Exchange Program}}
+		{\emph{Exchange}}
 		{\emph{Jan 2017 - May 2017}}
 
 \end{itemize}
@@ -114,7 +131,7 @@
 		{\textbf{Zürich, Switzerland}}
 	\\
 	\headerrow
-		{\emph{Master's Thesis @ \href{https://stat.ethz.ch/~vsara/}{Prof. Dr. Sara van de Geer}}}
+		{\emph{Master's Thesis @ Prof. dr. \href{https://stat.ethz.ch/~vsara/}{Sara van de Geer}}}
 		{\emph{Oct 2022 - Mar 2023}}
 	\begin{itemize*}
 		\item Surveyed the approximation properties of two-layer neural networks (2NN)
@@ -227,7 +244,7 @@
 	\parskip=0.1em
 		\item
 		\headerrow
-			{Dean’s List of Outstanding Students, Faculty of Applied Science and Textiles, PolyU}
+			{Dean’s List of Outstanding Students, Faculty of Applied Science and Textiles, \textbf{PolyU}}
 			{2017}
 
 		% \item
@@ -242,6 +259,27 @@
 
 \end{itemize}
 
+
+%%%%%%%%%%%%%%%%%%%%
+% 5a. PUBLICATIONS %
+%%%%%%%%%%%%%%%%%%%%
+
+\hrule
+\vspace{-1em}
+\subsection*{Publications}
+
+\nocite{*} % This includes all entries in the bibliography file
+
+\printbibliography[heading=none]
+
+
+% \begin{refsection}
+% 	\section*{Publications}
+% 	\nocite{*}                          % cite everything
+% 	\printbibliography[heading = none,  % no heading (e.g., "References")
+% 	keyword = article,                  % FILTER BY < article > KEYWORD
+% 	env = mybib]                        % Use mybib style
+% \end{refsection}
 
 %%%%%%%%%%%%%%%%%%%%%%%
 % 5. TECHNICAL SKILLS %
@@ -263,6 +301,9 @@
 	% \end{itemize*}
 
 \end{description*}
+
+
+
 \end{indentsection}
 
 
