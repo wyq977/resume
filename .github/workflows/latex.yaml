@@ -1,0 +1,38 @@
+name: Build and Deploy LaTeX Document
+
+on:
+  push:
+    paths:
+      - resume.tex
+
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out resume repo
+        uses: actions/checkout@v4
+        with:
+          path: resume
+      - name: Check out wyq977.github.io repo
+        uses: actions/checkout@v4
+        with:
+          repository: wyq977/wyq977.github.io
+          path: wyq977.github.io
+          token: ${{ secrets.PAGE_TOKEN }}
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: resume.tex
+          working_directory: ${{ github.workspace }}/resume
+      - name: Copy compiled files
+        run: |
+          cp ${{ github.workspace }}/resume/resume.pdf ${{ github.workspace }}/wyq977.github.io/static/resume.pdf
+      - name: Commit and push changes
+        uses: actions-js/push@master
+        with:
+          repository: wyq977/wyq977.github.io
+          branch: main
+          token: ${{ secrets.PAGE_TOKEN }}
+          message: "Update resume PDF"
