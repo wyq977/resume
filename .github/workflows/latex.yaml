@@ -41,4 +41,4 @@ jobs:
           repository: wyq977/wyq977.github.io
           branch: main
           directory: ${{ github.workspace }}/wyq977.github.io
-          message: "Update resume PDF ${date}"
+          message: "Update resume PDF $(date +'%Y-%m-%d')"
